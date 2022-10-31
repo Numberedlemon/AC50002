@@ -1,7 +1,8 @@
 // Javascript file for assignment 1 handling the drawing of the map.
 
-const width = 900;
-const height = 600;
+function d3Draw() {
+const width = 500;
+const height = 500;
 
 const mapsvg = d3
 	.select("body")
@@ -11,8 +12,8 @@ const mapsvg = d3
 
 const projection = d3
 	.geoMercator()
-	.scale(1200)
-	.translate([width / 1.5, (6 * height) / 2]);
+	.scale(1000)
+	.translate([width / 2, (5.5 * height) / 2]);
 
 const path = d3.geoPath(projection);
 
@@ -28,5 +29,5 @@ d3.json("../GeoJSON data/mapuk-v1.json").then((data) => {
 		.attr("class", "country")
 		.attr("d", path);
 });
-
-window.onload;
+}
+window.onload = d3Draw;

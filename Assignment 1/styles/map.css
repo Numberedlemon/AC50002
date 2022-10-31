@@ -2,3 +2,15 @@
 	fill: #ffffff;
 	stroke: #999;
 }
+
+p.acknowledgement {
+	position: absolute;
+	top: 550px;
+	width: 600px;
+	height: 20px;
+}
+
+button.refresh {
+	position: absolute;
+	top: 530px;
+}
