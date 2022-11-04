@@ -4,20 +4,35 @@
 		<meta charset="utf-8" />
 		<script src="https://d3js.org/d3.v7.min.js"></script>
 		<script src="https://d3js.org/topojson.v2.min.js"></script>
-		<script src="./scripts/d3-map.js"></script>
+		<script src="./scripts/d3-mapDraw.js"></script>
 		<script src="./scripts/loadData.js"></script>
+		<script src="./scripts/onload.js"></script>
+		<script src="./scripts/updateData.js"></script>
 		<link rel="stylesheet" href="styles/map.css" />
+		<title>UK Map Visualiser</title>
 	</head>
 	<body>
-		<h1>UK Town Visualiser</h1>
-		<button onClick="window.location.reload();" class="refresh">
-			Click Here to refresh the data.
+		<div>
+			<h1>UK Town Visualiser</h1>
+		</div>
+		<button onClick="d3Update();" class="refresh">
+			Click Here to generate new data
 		</button>
 		<p class="acknowledgement">
-			This project was made possible by TopoJSON, and [Mike Bostock's
-			Tutorials](https://bost.ocks.org/mike/map/).
+			This project was made possible by TopoJSON, and
+			<a href="https://bost.ocks.org/mike/map/">
+				Mike Bostock's Tutorials.</a
+			>
 		</p>
-
-		<input type="number" name="town number" value="10" id="town_value" />
+		<div class="number_box">
+			Choose the number of towns to generate.
+			<input
+				type="number"
+				name="town number"
+				value="10"
+				id="town_value"
+				class="town_value"
+			/>
+		</div>
 	</body>
 </html>

@@ -1,18 +1,18 @@
 .country {
-	fill: #ffffff;
-	stroke: #999;
+	fill: #a4927a;
+	stroke: rgb(57, 56, 56);
 }
 
 p.acknowledgement {
 	position: absolute;
-	top: 550px;
+	top: 580px;
 	width: 600px;
 	height: 20px;
 }
 
 button.refresh {
 	position: absolute;
-	top: 550px;
+	top: 55px;
 }
 
 .tooltip {
@@ -20,4 +20,23 @@ button.refresh {
 	pointer-events: none;
 	background: #000;
 	color: #fff;
+}
+
+.Data {
+	padding-top: 24px;
+	position: absolute;
+	top: 110px;
+	left: 10px;
+}
+
+.Map {
+	padding-top: 24px;
+	position: absolute;
+	top: 110px;
+	left: 10px;
+	background-color : #006994;
+	outline : 1px solid black;
+}
+.town_value {
+	width: 40px;
 }
