@@ -34,9 +34,13 @@ button.refresh {
 	position: absolute;
 	top: 110px;
 	left: 10px;
-	background-color : #006994;
-	outline : 1px solid black;
+	background-color: #006994;
+	outline: 1px solid black;
 }
 .town_value {
 	width: 40px;
+}
+
+.town:hover {
+	fill: red;
 }

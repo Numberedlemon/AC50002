@@ -24,9 +24,7 @@ function d3LoadData() {
 			.data(data)
 			.enter()
 			.append("circle")
-			.attr("class", function (d) {
-				return d.Town;
-			})
+			.attr("class", "town")
 			.attr("cx", function (d) {
 				return projection([d.lng, d.lat])[0];
 			})
