@@ -1,9 +1,13 @@
 function d3Update() {
 	d3.selectAll(".Data").remove();
 
+	// constants to define the width and height of the svg.
+
 	const width = 450;
 	const height = 450;
 
+	// defines the svg as a constant. This object has class 'Data'
+	// to allow for css styling to be applied independent of the map.
 	const mapsvg = d3
 		.select("body")
 		.append("svg")
@@ -11,15 +15,21 @@ function d3Update() {
 		.attr("height", height)
 		.attr("class", "Data");
 
+
+	// defining projection to be a mercator-style map.	
 	const projection = d3
 		.geoMercator()
 		.center([0, 55.4])
 		.scale(1250)
 		.translate([(1.3 * width) / 2, (1 * height) / 2]);
 
-	const path = d3.geoPath(projection);
-
+	// define the 'g' object to be added to the svg.	
 	const g = mapsvg.append("g");
+
+	// loads and processes the feed, using the value of the town_value box
+	// as defined in 'd3-map.html'.
+
+	// this code is effectively identical to the code contained in 'loadData.js'
 
 	d3.json("http://34.78.46.186/Circles/Towns/" + town_value.value).then(
 		(data) => {
@@ -27,9 +37,7 @@ function d3Update() {
 				.data(data)
 				.enter()
 				.append("circle")
-				.attr("class", function (d) {
-					return d.Town;
-				})
+				.attr("class", 'town')
 				.attr("cx", function (d) {
 					return projection([d.lng, d.lat])[0];
 				})

@@ -1,3 +1,5 @@
+/* this file contains all the fixed and conditional css styling for 'd3-map.html' */ 
+
 .country {
 	fill: #a4927a;
 	stroke: rgb(57, 56, 56);
@@ -41,6 +43,6 @@ button.refresh {
 	width: 40px;
 }
 
-.town:hover {
+.town:hover { /* on hover, turn the circle the mouse is over red */
 	fill: red;
 }
