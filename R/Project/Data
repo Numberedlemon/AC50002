@@ -1,0 +1,17 @@
+library(tidyverse)
+library(dplyr)
+
+f1_data <- read.csv("C:\\Dundee University Work\\Programming Languages For Data Engineers\\R\\Project\\F1 Dataset\\results.csv")
+
+f1_drivers <- read.csv("C:\\Dundee University Work\\Programming Languages For Data Engineers\\R\\Project\\F1 Dataset\\drivers.csv")
+
+for (i in f1_drivers$code) {
+    
+}
+
+f1_data <- dplyr::filter(f1_data,raceId == 400)
+
+ggplot(data = f1_data, aes(x = driverId, y = position)) +
+    geom_bar(stat = "Identity")
+
+f1_drivers
