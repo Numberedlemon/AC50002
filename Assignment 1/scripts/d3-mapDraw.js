@@ -50,5 +50,5 @@ function d3Draw() {
 	});
 }
 
-// this code was written using Mike Bostock's tutorials and his archive,
-// which proved instrumental in my understanding of GeoJSON and TopoJSON.
+// this code was written using Mike Bostock's tutorials and his archive as help,
+// which proved instrumental in my understanding of GeoJSON and TopoJSON and geomapping in javascript in general.

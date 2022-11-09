@@ -43,7 +43,7 @@ function d3LoadData() {
 				return 0.00005 * d.Population;
 			})
 			.append("svg:title") // creating a child of svg to handle the tooltips.
-			.text(function (d) {
+			.text(function (d) { // title of the tooltip contains town name, population, and county.
 				var townData =
 					d.Town +
 					"\nPopulation: " +

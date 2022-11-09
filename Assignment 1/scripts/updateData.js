@@ -1,8 +1,8 @@
 function d3Update() {
+	// removes all data in the svg of class 'Data'
 	d3.selectAll(".Data").remove();
 
 	// constants to define the width and height of the svg.
-
 	const width = 450;
 	const height = 450;
 
@@ -47,7 +47,7 @@ function d3Update() {
 				.attr("r", function (d) {
 					return 0.00005 * d.Population;
 				})
-				.append("svg:title")
+				.append("svg:title") // creation of child of svg to handle tooltips.
 				.text(function (d) {
 					var townData =
 						d.Town +
